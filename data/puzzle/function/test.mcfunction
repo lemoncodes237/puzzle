@@ -1,1 +1,1 @@
-say hi
+give @s item_frame[item_name={"translate":"item.chefsdream.carrot_cake"},item_model="chefsdream:carrot_cake",entity_data={id:"item_frame",Invisible:1b,Tags:["chefsdreamcake","cd_carrot_cake_frame"]},custom_data={chefsdreamcake:1}] 1
