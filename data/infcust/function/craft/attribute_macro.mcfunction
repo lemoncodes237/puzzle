@@ -1,1 +1,0 @@
-$data modify entity @s Item.components."minecraft:attribute_modifiers" append value {type:"minecraft:$(type)",amount:$(amount),id:"infcust:$(type)",operation:"$(operation)",slot:$(slot)}

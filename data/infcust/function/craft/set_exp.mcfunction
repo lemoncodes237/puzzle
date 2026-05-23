@@ -1,1 +1,0 @@
-$experience set @a[tag=inf_crafter,distance=..20,limit=1] $(exp) levels

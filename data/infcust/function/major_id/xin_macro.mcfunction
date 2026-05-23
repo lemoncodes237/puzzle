@@ -1,1 +1,0 @@
-$attribute @s attack_damage modifier add infcust:xin $(amt) add_value

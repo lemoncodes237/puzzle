@@ -1,1 +1,0 @@
-execute as @e[type=interaction,tag=inf_magic_table] at @s positioned ~ ~1.5 ~ run function infcust:delete_table

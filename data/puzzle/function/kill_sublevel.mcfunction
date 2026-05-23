@@ -1,0 +1,1 @@
+kill @e[tag=puz_sublevel,distance=..5,limit=10,sort=nearest]
