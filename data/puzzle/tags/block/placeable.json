@@ -1,0 +1,15 @@
+{
+    "values":[
+      "#minecraft:logs",
+      "#minecraft:dirt",
+      "#minecraft:planks",
+      "#minecraft:grass_blocks",
+      "#minecraft:snow",
+      "minecraft:diamond_block",
+      "minecraft:emerald_block",
+      "minecraft:iron_block",
+      "minecraft:lapis_block",
+      "minecraft:gold_block",
+      "minecraft:redstone_block"
+    ]
+  }
