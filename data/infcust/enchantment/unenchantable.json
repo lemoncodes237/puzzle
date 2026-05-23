@@ -1,0 +1,51 @@
+{
+  "anvil_cost": 1000,
+  "description": {
+    "text": "Unenchantable",
+    "color": "red"
+  },
+  "max_cost": {
+    "base": 75,
+    "per_level_above_first": 25
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 75,
+    "per_level_above_first": 25
+  },
+  "slots": [
+    "any"
+  ],
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "infcust:sword_check"
+        },
+        "enchanted": "attacker",
+        "requirements": {
+          "condition": "minecraft:all_of",
+          "terms": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type": "#infcust:enemies"
+              }
+            },
+            {
+              "condition": "minecraft:damage_source_properties",
+              "predicate": {
+                "is_direct": true
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "supported_items": "#minecraft:enchantable/durability",
+  "weight": 2
+}
