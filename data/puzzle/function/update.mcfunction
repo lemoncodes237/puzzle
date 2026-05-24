@@ -2,6 +2,7 @@ scoreboard players set #check-time puz-time 0
 
 effect give @a night_vision infinite 0 true
 effect give @a speed infinite 0 true
+effect give @a saturation infinite 0 true
 
 scoreboard players operation #making-level puz-level = @p puz-level
 
