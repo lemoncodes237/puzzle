@@ -1,0 +1,1 @@
+$function puzzle:level/end/level$(level)

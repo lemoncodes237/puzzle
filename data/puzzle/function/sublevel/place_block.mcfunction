@@ -6,3 +6,5 @@ execute if entity @s[tag=puzzle_summon_lapis] run function puzzle:spawn/block/la
 
 kill @s
 execute align xyz run function puzzle:sublevel/create_block
+
+execute as @e[type=marker,tag=puz_ender,tag=!puz_ended,distance=..5] if score @s puz-level = #making-level puz-level at @s run function puzzle:level/check_end

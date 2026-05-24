@@ -1,4 +1,11 @@
-execute if items entity @a container.* item_frame[custom_data~{puzzle_summon:1}] run return run title @a actionbar "You must use blocks in your inventory before exiting"
+execute if items entity @a container.* item_frame[custom_data~{puzzle_summon:1}] run return run title @a actionbar "All blocks must be placed before exiting a state"
+
+# Block check again
+scoreboard players set #check puz-level 0
+execute as @e[type=marker,tag=puz_marker] if score @s puz-level = #making-level puz-level run scoreboard players add #check puz-level 1
+execute store result storage puzzle:blocks curr int 1 run scoreboard players get #making-level puz-level
+execute store result score #check puz-time run function puzzle:sublevel/check_placed with storage puzzle:blocks
+execute if score #check puz-time matches 1 run return run title @a actionbar "All blocks must be placed before exiting a state"
 
 tag @e[type=item_display,tag=puz_main,distance=..1] remove puz_curr
 
