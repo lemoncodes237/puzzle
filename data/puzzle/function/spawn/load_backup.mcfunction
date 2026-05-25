@@ -10,5 +10,3 @@ tag @a remove sublevel_ended
 clear @a item_frame
 
 tag @e[type=item_display,tag=puz_curr,distance=..100] remove puz_curr
-
-tellraw @s "Backup loaded"

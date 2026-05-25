@@ -1,0 +1,1 @@
+$function puzzle:level/quit/level$(level)

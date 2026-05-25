@@ -19,3 +19,8 @@ execute at @a as @e[type=interaction,tag=puz_move_block,distance=..10] at @s on 
 execute at @a as @e[type=interaction,tag=puz_move_block,distance=..10] run data remove entity @s interaction
 
 execute at @a as @e[type=item_frame,tag=puzzle_summon,distance=..10] at @s run function puzzle:sublevel/place_block
+
+execute as @a unless score @s quit matches 0 run function puzzle:level/quit
+
+# World check
+execute as @a[tag=!world1] if score #total puz-level matches 1.. run function puzzle:world/end_world_0

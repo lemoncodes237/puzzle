@@ -5,3 +5,4 @@ team modify puzzle collisionRule never
 team join puzzle @a
 
 scoreboard objectives add puz-level dummy
+scoreboard objectives add quit trigger

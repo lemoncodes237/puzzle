@@ -3,6 +3,8 @@ execute unless block ~ ~ ~ diamond_block run return 0
 # Level ended
 tag @s add puz_ended
 execute at @a run playsound entity.player.levelup master @a
+tag @a remove in_level
+scoreboard players add #total puz-level 1
 
 tag @a remove in_sublevel
 tag @a remove sublevel_started
