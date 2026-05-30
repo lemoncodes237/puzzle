@@ -15,7 +15,7 @@ execute if entity @a[tag=in_sublevel,tag=!sublevel_started] as @a at @s if entit
 execute as @a[tag=sublevel_started] at @s unless entity @e[type=item_display,tag=puz_main,distance=..1] run tag @a remove sublevel_started
 execute as @a[tag=sublevel_ended] at @s unless entity @e[type=item_display,tag=puz_main,distance=..1] run tag @a remove sublevel_ended
 
-execute at @a as @e[type=interaction,tag=puz_move_block,distance=..10] at @s on target run function puzzle:sublevel/take_block with storage puzzle:sublevel
+execute at @a as @e[type=interaction,tag=puz_move_block,distance=..10] at @s positioned ~ ~0.5 ~ if data entity @s interaction run function puzzle:sublevel/take_block with storage puzzle:sublevel
 execute at @a as @e[type=interaction,tag=puz_move_block,distance=..10] run data remove entity @s interaction
 
 execute at @a as @e[type=item_frame,tag=puzzle_summon,distance=..10] at @s run function puzzle:sublevel/place_block
