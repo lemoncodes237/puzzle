@@ -6,3 +6,4 @@ team join puzzle @a
 
 scoreboard objectives add puz-level dummy
 scoreboard objectives add quit trigger
+scoreboard objectives add reset trigger
