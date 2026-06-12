@@ -1,0 +1,1 @@
+execute as @e[type=marker,tag=puz_ender,distance=..2,limit=1,sort=nearest] if score @s puz-level = #making-level puz-level run kill @s
