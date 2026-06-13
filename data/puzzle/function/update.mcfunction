@@ -1,8 +1,13 @@
 scoreboard players set #check-time puz-time 0
 
+# Start logic
+execute unless score #onboard puz-level matches 1 run function puzzle:world/begin
+
 effect give @a night_vision infinite 0 true
 effect give @a speed infinite 0 true
 effect give @a saturation infinite 0 true
+# tehe
+effect give @a resistance infinite 100 true
 
 scoreboard players operation #making-level puz-level = @p puz-level
 
@@ -25,3 +30,4 @@ execute as @a unless score @s reset matches 0 run function puzzle:level/reset
 
 # World check
 execute as @a[tag=!world1] if score #total puz-level matches 1.. run function puzzle:world/end_world_0
+execute as @a[tag=!world2] if score #total puz-level matches 11.. run function puzzle:world/end_world_1
