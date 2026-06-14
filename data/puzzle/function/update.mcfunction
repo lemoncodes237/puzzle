@@ -1,7 +1,7 @@
 scoreboard players set #check-time puz-time 0
 
 # Start logic
-execute unless score #onboard puz-level matches 1 run function puzzle:world/begin
+#execute unless score #onboard puz-level matches 1 run function puzzle:world/begin
 
 effect give @a night_vision infinite 0 true
 effect give @a speed infinite 0 true
