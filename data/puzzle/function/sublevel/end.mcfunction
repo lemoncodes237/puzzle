@@ -1,5 +1,7 @@
 execute if items entity @a container.* item_frame[custom_data~{puzzle_summon:1}] run return run title @a actionbar "All blocks must be placed before exiting a state"
 
+execute as @a if predicate {condition:"minecraft:entity_properties",entity:"this",predicate:{flags:{is_swimming:0b,is_flying:0b}}} at @s positioned ~ ~1 ~ unless entity @s[dy=0.5] run return run title @a actionbar "You cannot exit a state while crawling"
+
 # Block check again
 scoreboard players set #check puz-level 0
 execute as @e[type=marker,tag=puz_marker] if score @s puz-level = #making-level puz-level run scoreboard players add #check puz-level 1
